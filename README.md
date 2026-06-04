@@ -1,66 +1,74 @@
 # Reno Notice Board
 
-A responsive Notice Board application built for the Reno Platforms Web Development Internship Assignment. The application supports complete Create, Read, Update and Delete (CRUD) functionality using Next.js Pages Router, Prisma ORM and a MySQL-compatible hosted database.
+A responsive Notice Board application built for the Reno Platforms Web Development Internship Assignment.
+
+## Live Demo
+
+https://reno-notice-board-fvwfc7g7b-akarsh-nag-s-projects.vercel.app
+
+## GitHub Repository
+
+https://github.com/Akarsh63069/reno-notice-board
 
 ## Features
 
-* List notices as responsive cards
-* Add new notice
-* Edit existing notice with pre-filled values
-* Delete notice after confirmation
-* Search notices by title, category or priority
-* Server-side validation through API routes
-* Urgent notices displayed with priority badge
-* Prisma-powered database operations
+* Create notices
+* View notices
+* Edit notices
+* Delete notices with confirmation
+* Search notices
+* Urgent notice priority support
 * Optional image URL support
-* Responsive design for desktop and mobile devices
-* Deployment ready with Vercel
+* Responsive design
+* Prisma ORM integration
+* TiDB Cloud database integration
+* Vercel deployment
 
 ## Tech Stack
 
 * Next.js (Pages Router)
 * React
 * Prisma ORM
-* MySQL-compatible hosted database (TiDB Cloud)
+* TiDB Cloud (MySQL Compatible)
 * Tailwind CSS
 * Vercel
 
 ## Run Locally
 
-### 1. Clone the repository
+### Clone Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Akarsh63069/reno-notice-board.git
 cd reno-notice-board
 ```
 
-### 2. Install dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Create environment file
+### Create Environment File
 
-Create a `.env` file and add your database connection string.
+Create a `.env` file and add:
 
 ```env
 DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE?sslaccept=strict"
 ```
 
-### 4. Generate Prisma Client
+### Generate Prisma Client
 
 ```bash
 npx prisma generate
 ```
 
-### 5. Push schema to database
+### Push Database Schema
 
 ```bash
 npx prisma db push
 ```
 
-### 6. Run development server
+### Run Development Server
 
 ```bash
 npm run dev
@@ -72,70 +80,13 @@ Open:
 http://localhost:3000
 ```
 
-## Environment Variables
-
-```env
-DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE?sslaccept=strict"
-```
-
-## API Routes
-
-### Notices Collection
-
-* GET `/api/notices` — Fetch all notices
-* POST `/api/notices` — Create a new notice
-
-### Individual Notice
-
-* GET `/api/notices/[id]` — Fetch a single notice
-* PUT `/api/notices/[id]` — Update a notice
-* DELETE `/api/notices/[id]` — Delete a notice
-
-## Project Structure
-
-```text
-components/
-│
-├── NoticeForm.js
-
-pages/
-│
-├── index.js
-├── add.js
-├── edit/
-│   └── [id].js
-│
-└── api/
-    └── notices/
-        ├── index.js
-        └── [id].js
-
-lib/
-│
-├── prisma.js
-├── validateNotice.js
-
-prisma/
-│
-└── schema.prisma
-
-styles/
-│
-└── globals.css
-```
-
 ## What I Would Improve With More Time
 
-* Image upload support using cloud storage
-* Advanced filtering and sorting
-* Pagination for large datasets
-* Toast notifications for user actions
-* Automated testing for API routes
-* User authentication and role management
+I would add user authentication, cloud-based image uploads, advanced filtering, pagination, and automated testing to improve scalability and user experience.
 
 ## AI Usage
 
-AI tools were used for requirement clarification, project planning and code review assistance. Application logic, debugging, testing and final implementation decisions were manually verified before submission.
+AI tools were used for requirement clarification, project planning, debugging assistance, code review support, and documentation guidance. All implementation, database integration, deployment, testing, and final verification were completed manually.
 
 ## Author
 
